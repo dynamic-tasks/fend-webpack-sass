@@ -1,0 +1,20 @@
+$dark_gray: #545454;
+$form_colors: (
+    dark_gray: $dark_gray
+);
+@mixin demo($colors) {
+    border: 1px solid map-get($colors, dark_gray);
+}
+/* note if variable it accessed $dark_gray , while if map key it accessed dark_gray without $ (best ex $dark_gray can be variable in module and 
+form-colors is spearate page uses the main module and it's colors etc. */
+form {
+    @include demo($form_colors);
+    border-radius: 3px;
+    padding: 40px;
+    input {
+        padding: 5px 20px;
+        width: 100%;
+        line-height: 16px;
+        margin: 10px 0;
+    }
+}
