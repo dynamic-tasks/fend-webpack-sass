@@ -1,0 +1,16 @@
+$main_bg: lightblue;
+$main_color: black;
+
+$main: (
+    bg: $main_bg,
+    col: $main_color
+);
+
+@mixin demo($arg) {
+    background: map-get($arg, bg);
+    color: map-get($arg, col);
+}
+
+body {
+    @include demo($main)
+}
