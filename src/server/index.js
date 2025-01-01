@@ -13,9 +13,9 @@ var json = {
 const app = express()
 app.use(cors())
 // to use json
-app.use(bodyParser.json())
+app.use(express.json());
 // to use url encoded values
-app.use(bodyParser.urlencoded({
+app.use(express.urlencoded({
   extended: true
 }))
 
