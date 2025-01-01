@@ -8,6 +8,10 @@ module.exports = {
     entry: './src/client/index.js',
     mode: 'production',
     stats: 'verbose',
+    output: {
+        libraryTarget: 'var',
+        library: 'Client'
+    },
     module: {
         rules: [
             {
@@ -54,7 +58,8 @@ module.exports = {
             protectWebpackAssets: false
         }),
         new MiniCssExtractPlugin({
-            filename: 'styles.css'  // This extracts the CSS into a separate file
+            filename: 'styles.css',  // This extracts the CSS into a separate file
+            chunkFilename: '[id].css',
         })
     ]
 }

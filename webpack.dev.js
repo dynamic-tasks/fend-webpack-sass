@@ -8,6 +8,10 @@ module.exports = {
     mode: 'development',
     devtool: 'source-map',
     stats: 'verbose',
+    output: {
+        libraryTarget: 'var',
+        library: 'Client'
+    },
     module: {
         rules: [
             {
@@ -46,10 +50,11 @@ module.exports = {
             protectWebpackAssets: false
         })
     ],
-    devServer: {/*
+    devServer: {
         port: 5000,
         proxy: {
-          '/test': 'http://localhost:3000', // Proxy to your Express backend
-        }*/
+          '/test': 'http://localhost:3000', // Proxy to your Express backend,
+          '/ok': 'http://localhost:3000', // Proxy to your Express backend
+        }
     }
 }

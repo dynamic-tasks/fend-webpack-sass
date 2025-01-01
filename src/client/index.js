@@ -25,6 +25,9 @@ pass to file-loader that will create new images with name using variable [hash]-
 */
 
 console.log(handleSubmit, checkForName);
-
 alert("I EXIST did u reload hello");
-console.log("CHANGE!!");
+console.log("CHANGE!!", Client);
+export {
+    handleSubmit,
+    checkForName
+}
