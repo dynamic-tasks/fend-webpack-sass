@@ -1,4 +1,4 @@
-$dark_gray: #545454;
+$dark_gray: lightblue;
 $form_colors: (
     dark_gray: $dark_gray
 );
@@ -7,7 +7,7 @@ $form_colors: (
 }
 /* note if variable it accessed $dark_gray , while if map key it accessed dark_gray without $ (best ex $dark_gray can be variable in module and 
 form-colors is spearate page uses the main module and it's colors etc. */
-form {
+form.main_form {/* any thing in index entery is injected as tag by default*/
     @include demo($form_colors);
     border-radius: 3px;
     padding: 40px;
@@ -17,4 +17,7 @@ form {
         line-height: 16px;
         margin: 10px 0;
     }
+}
+body {
+    background: lightgray;
 }

@@ -1,5 +1,7 @@
+/* component form */
 function handleSubmit(event) {
-    event.preventDefault()
+
+    event.preventDefault();
 
     // check what text was put into the form field
     let formText = document.getElementById('name').value
@@ -13,4 +15,5 @@ function handleSubmit(event) {
     })
 }
 
+console.log("hello form handler");
 export { handleSubmit }

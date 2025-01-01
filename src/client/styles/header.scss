@@ -1,5 +1,27 @@
+$header-main: lightblue;
 header {
     display: flex;
     justify-content: space-between;
     padding: 10px 40px;
+    .logo {
+        background: url('../static/images/home_icon.png');
+    }
+    .menu {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .navitem {
+            background: $header-main;
+            padding: 3px 8px;
+            &:hover {
+                background: darken($header-main, 15%);
+            }
+        }
+        .settings {
+            background: url('../static/images/settings_icon.svg');
+        }
+    }
 }
+
+
+
